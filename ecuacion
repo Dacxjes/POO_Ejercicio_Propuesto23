@@ -1,0 +1,56 @@
+
+package poo_ecuacion_ejercicio_propuesto23;
+
+import java.util.Scanner;
+
+public class POO_Ecuacion_Ejercicio_Propuesto23 {
+
+
+    public static void main(String[] args) {
+        Scanner ecuacion = new Scanner(System.in);
+        
+        double A, B, C, X1, X2, discriminante, s1, s2;
+        
+        System.out.println("Sean A el coeficiente de X^2, B el coeficiente de X y C el valor del termino independiente,"
+                + "        \nIngrese el valor del parametro A: ");
+                            A = ecuacion.nextDouble();
+        System.out.println("Ingrese el valor del parametro B: ");
+            B = ecuacion.nextDouble();
+        System.out.println("Ingrese el valor del parametro C: ");
+            C = ecuacion.nextDouble();
+        
+    discriminante = (Math.pow(B, 2) - (4 * A * C));
+    
+    if (discriminante >= 0) {
+ 
+     // Una solucion
+        if(discriminante == 0){
+                  
+            s1 = (-B)/2*A;
+ 
+            s2= s1;
+            
+            System.out.println("Las soluciones son reales e iguales y son: \nX1: "+s1+"\nX2: "+s2 );
+            
+             
+        // Dos soluciones
+        }else{
+            
+            System.out.println("DET"+ discriminante);
+       
+            s1 = ((-B) + Math.sqrt(discriminante))/(2*A);
+ 
+            s2 = ((-B) - Math.sqrt(discriminante))/(2*A);
+            
+            System.out.println("Las soluciones son reales y diferentes y son: \nX1: "+s1+"\nX2: "+s2 );
+        }
+          
+       }
+
+    else {
+        System.out.println("La ecuacion no tiene solucion en los reales ");
+         }
+       ecuacion.close();
+    }
+}
+    
